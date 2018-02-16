@@ -13,8 +13,8 @@ const fs = require('fs');
 const proxyServer = 'socks://128.68.167.210:9050';
 // const proxyServer = 'socks://47.75.16.250:1080';
 
-let poloniex = new Poloniex(apiKey, secretKey, {agent: new SocksProxyAgent(proxyServer), socketTimeout : 120000});
-// let poloniex = new Poloniex(apiKey, secretKey, {socketTimeout : 120000});
+// let poloniex = new Poloniex(apiKey, secretKey, {agent: new SocksProxyAgent(proxyServer), socketTimeout : 120000});
+let poloniex = new Poloniex(apiKey, secretKey, {socketTimeout : 120000});
 
 var prefix = __dirname + '/data/'
 var namefile = prefix + Math.round((new Date()).getTime()/1000) + '.txt';
